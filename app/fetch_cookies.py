@@ -7,8 +7,20 @@ def get_cookies():
         dict: A dictionary containing the 'cf_clearance' cookie if successful, otherwise an empty dict.
     """
     try:
-        # Instantiate the solver for the target website
-        cf = CF_Solver('https://gmgn.ai')
+        # Define custom headers to mimic a real browser
+        headers = {
+            'User-Agent': ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                           'AppleWebKit/537.36 (KHTML, like Gecko) '
+                           'Chrome/133.0.0.0 Safari/537.36'),
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Referer': 'https://gmgn.ai/'
+        }
+
+        # Instantiate the solver for the target website with our custom headers
+        cf = CF_Solver('https://gmgn.ai', headers=headers)
+
         # Retrieve the clearance cookie
         cookie = cf.cookie()
         if cookie:
