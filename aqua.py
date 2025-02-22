@@ -432,7 +432,7 @@ class CF_Solver(CF_MetaData):
     """
     Code Examples:
         - code 1:
-            cf = CF_Solver('https://discord.com')
+            cf = CF_Solver('https://gmgn.ai')
             cookie = cf.cookie() # return cf_clearance cookie
 
 
@@ -440,7 +440,7 @@ class CF_Solver(CF_MetaData):
             # Different cdn-cgi/challenge-platform URL 
 
             cf = CF_Solver(
-                'https://www.support.kogama.com',
+                'https://www.gmgn.ai',
                 jsd_main='/cdn-cgi/challenge-platform/h/b/scripts/jsd/62ec4f065604/main.js',
                 jsd_request='/cdn-cgi/challenge-platform/h/b/jsd/r'
             )
@@ -453,7 +453,7 @@ class CF_Solver(CF_MetaData):
             session.headers = {...}
 
             cf = CF_Solver(
-                'https://discord.com',
+                'https://gmgn.ai',
                 clientRequest=session
             )
             cookie = cf.cookie() # return cf_clearance cookie
