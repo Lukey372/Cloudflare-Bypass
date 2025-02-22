@@ -11,3 +11,7 @@ def get_cookies():
     except Exception as e:
         print(f"❌ ERROR: {e}")
         return {}
+
+# follow up requests
+response = cf.client.get(url=url, timeout=10)
+response = cf.client.post(url=url, data=data, json=json, timeout=10)
