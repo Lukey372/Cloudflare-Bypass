@@ -1,5 +1,5 @@
-from flask import Flask, jsonify, send_file
-from fetch_cookies import get_cookies
+efrom flask import Flask, jsonify, send_file
+from app.fetch_cookies import get_cookies
 import os
 
 app = Flask(__name__)
